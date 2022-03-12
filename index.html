@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./coi-serviceworker.js"></script>
+        <script defer src="./lib/chess-0.10.2.js"></script>
+        <script defer src="./lib/jquery-3.4.1.min.js"></script>
+        <script defer src="./lib/chessboard-1.0.0.min.js"></script>
+        <script defer src="./lib/Koivisto_7.21.js"></script>
+        <script defer src="./index.js"></script>
+        <link href="./lib/chessboard-1.0.0.min.css" rel="stylesheet">
+        <link href="./index.css" rel="stylesheet">
+        <link href="./favicon.png" rel="icon" type="image/svg+xml">
+        <title>Koivisto Web</title>
+    </head>
+    <body>
+        <div id="game">
+            <div id="game-history">
+            </div>
+            <div id="board-container">
+                <div id="board">
+                </div>
+                <div id="promotions">
+                    <button data-piece="Q"></button>
+                    <button data-piece="N"></button>
+                    <button data-piece="R"></button>
+                    <button data-piece="B"></button>
+                </div>
+                <div id="loading-banner">Loading&nbsp;engine...</div>
+            </div>
+            <div id="right-panel">
+                <div id="p2-eval" class="eval"></div>
+                <button id="new-game">New Game</button>
+                <div id="p1-eval" class="eval"></div>
+            </div>
+            <div id="new-game-panel">
+                <button class="mode" data-mode="white">White</button>
+                <button class="mode" data-mode="black">Black</button>
+                <button class="mode" data-mode="auto">Self play</button>
+                <div id="think-time-container">
+                    <label>
+                        Think time:
+                        <input id="think-time" type="text">
+                        seconds
+                    </label>
+                </div>
+            </div>
+        </div>
+        <a id="source-code-link" href="https://github.com/Luecx/Koivisto">Source code</a>
+    </body>
+</html>
